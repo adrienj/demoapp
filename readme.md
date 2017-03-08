@@ -1,7 +1,5 @@
 # Comics demo app
 
-Browse Marvel Comics
-
 ## Getting started
 
 To run the app, execute:
