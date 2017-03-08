@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@import "./fonts.css";
+@import "./browser.css";
+@import "./animations.css";
+
+/* ordered for specificity */
+@import "./app.css";
+@import "./cart.css";
+@import "./icons.css";
+@import "./desktop.css" (min-width: 960px);
+
+/* variables */
+:root {
+    --highlightColor: #f0141e;
+    --textColor: #444;
+    --loadingColor:color(var(--highlightColor) lightness(- 30%));
+    --sidebarWidth: 38.2%;
+}
+

@@ -1,0 +1,210 @@
+#app, #main-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#app {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    background: white;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#header-container {
+    position: relative;
+    display: flex;
+    height: 60px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    background: white;
+}
+#logo-container {
+    flex-grow: 1;
+}
+#logo {
+    padding-left: 20px;
+    font-size: 25px;
+    line-height: 60px;
+    font-family: 'Pacifico' ,sans-serif;
+    background: #fff;
+    color: #111;
+}
+
+.btn-header {
+    width: 0;
+    margin: auto 10px;
+    height: 0;
+    background-color: #EEE;
+    padding: 10px 30px 30px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #DDD;
+        color: #111;
+    }
+}
+
+.loading-progress {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    animation: pulse 1s infinite;
+}
+
+#body-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    background: whitesmoke;
+}
+
+#list-container {
+    position: relative;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0px 10px;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: width .2s ease-out;
+}
+
+.btn-loadmore {
+    display: block;
+    clear: both;
+    width: 100px;
+    padding: 10px 20px;
+    margin: 10px auto 50px;
+    border-radius: 5px;
+    text-align: center;
+    background: #eee;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(0,0,0,0.3);
+    }
+}
+.price-tag,
+.btn-cart {
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+}
+
+.comicitem {
+    display: block;
+    position: relative;
+    width: 170px;
+    height: 240px;
+    margin: 30px 10px;
+    padding: 0;
+    float: left;
+    overflow: hidden;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 1px 0px rgba(0,0,0,0.3);
+    transition: transform .05s ease-out;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    }
+
+    &.selected {
+        transform: scale(1.15);
+        box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    }
+
+    & .cover {
+        max-width: 100%;
+        height: auto;
+    }
+
+    & .title {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        background: rgba(0,0,0,0.7);
+        z-index: 10;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        box-sizing: border-box;
+    }
+}
+
+.popup-container {
+    width: auto;
+    z-index: 40;
+}
+
+.popup-container,
+.popup-overlay {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.popup {
+    margin: auto;
+    display: block;
+    width: 85vw;
+    height: 85vh;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 10;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 0 100px rgba(0,0,0,0.3);
+
+    h4 {
+        margin-bottom: 5px;
+    }
+}
+
+.comic-popup {
+    & .price-tag,
+    & .btn-cart {
+        position: relative;
+        float: right;
+        min-width: 20px;
+    }
+    & .title {
+        margin: 0px 0 15px;
+        font-size: 30px;
+    }
+    & .description {
+        margin-top: 20px;
+    }
+    & .cover {
+        width: 80%;
+        display: flex;
+        margin: auto;
+    }
+}

@@ -1,0 +1,39 @@
+::selection { background:  var(--highlightColor); color: white; }
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    width: 4px;
+    border-radius: 10px;
+    background-clip: padding-box;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 4px solid rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
+input::-webkit-inner-spin-button {
+    opacity: .5;
+    cursor: pointer;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ul { list-style-type: none; padding: 0; margin: 0; overflow: hidden; }
+a { text-decoration: none; outline: none; color: var(--textColor); }
+p { margin: 0; padding: 0; }

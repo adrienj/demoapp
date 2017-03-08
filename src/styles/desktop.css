@@ -1,0 +1,64 @@
+
+#header-container {
+    height: 90px;
+}
+
+#logo {
+    font-size: 35px;
+    line-height: 90px;
+}
+
+.btn-header.cart-icon {
+    margin-right: 25px;
+}
+
+#cart-preview {
+    display: block;
+}
+
+#body-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#list-container {
+    height: 100%;
+    flex-shrink: 1;
+    padding: 10px 20px;
+
+    & .comicitem {
+        height: 260px;
+        width: 210px;
+        margin: 20px 10px;
+    }
+}
+
+#sidepanel-container {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: var(--sidebarWidth);
+    max-width: var(--sidebarWidth);
+    overflow: hidden;
+    animation: appear .2s;
+    background: white;
+}
+
+.popup {
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+}
+
+.popup-container {
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 100%;
+    animation: appear-fade .2s ease-out;
+
+
+    &.closing {
+        animation: disappear-fade .3s;
+    }
+}
