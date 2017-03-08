@@ -1,4 +1,4 @@
-# Beer demo app
+# Comics demo app
 
 Browse Marvel Comics
 
